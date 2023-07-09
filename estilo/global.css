@@ -35,3 +35,7 @@ body{
     padding: 0;
     background-color: var(--body-color);  
 }
+
+#button-hamburger{
+    display: none;
+}

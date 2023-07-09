@@ -1,5 +1,30 @@
-@media only and screen (min-width:1150px){
-    body{
-        background: red;
+@media screen and (max-width:1100px){
+    .logomarca{
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px){
+    .logomarca{
+        display: block;
+    }
+    #button-hamburger{
+        display:block;
+        margin-right: 20px;   
+    }
+    .navegacao{
+        display:none;
+    }
+    .opcoes{
+        display: block;
+    }
+    .opcoes li{
+        margin: 10px 0px;
+    }
+    .opcoes li:nth-last-child(-n+3) {
+        display: none;
+    }
+    header{
+        text-align: end;
     }
 }
