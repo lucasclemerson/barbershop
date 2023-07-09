@@ -1,0 +1,5 @@
+@media only and screen (min-width:1150px){
+    body{
+        background: red;
+    }
+}

@@ -1,0 +1,75 @@
+.logomarca {
+    color: var(--body-color);
+    margin: 0 auto;
+    display: inline-block;
+    margin: 10px 20px;
+    text-align: start;
+    position: absolute;
+    left: 50px;
+}
+
+.navegacao{
+    display: inline-block;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.opcoes {
+    width: 80%;
+    text-align: center;
+    list-style: none;
+    width: auto;
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    align-items: center;
+}
+
+.ancor{
+    text-decoration: none;
+    color:var(--white-color);
+}
+.ancor:hover{
+    font-weight: bold;
+    color: var(--info-color);
+}
+
+
+.separador{
+    color: var(--white-color);
+    font-size: 1.4em;
+    margin: auto 0px;
+}
+
+
+/* butões */
+
+.button-success{
+    font-weight: bold;
+    margin: 0 auto;
+    border:0px;
+    border-radius: 6px;
+    padding: 9px 16px;
+    color: var(--primary-color);
+    background: var(--success-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-danger{
+    font-weight: bold;
+    margin: 0 auto;
+    border:0px;
+    border-radius: 6px;
+    padding: 9px 16px;
+    color: var(--primary-color);
+    background: var(--error-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-danger:hover,
+.button-success:hover{
+    opacity: .9;
+    color:var(--white-color);
+}
