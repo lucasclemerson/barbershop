@@ -1,3 +1,5 @@
+/*header*/
+
 .logomarca {
     color: var(--body-color);
     margin: 0 auto;
@@ -42,16 +44,91 @@
 }
 
 
+/*carousel*/
+.carousel {
+    width: 100%;
+    margin: auto;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    width: auto;
+    display: inline-flex;
+    width: fit-content;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    width: auto;
+    background-color: #f2f2f2;
+}
+
+.slide img{
+    width: 1297px;
+    z-index: -1;
+}
+  
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--body-color);
+    background-color: var(--primary-color);
+    font-size: 24px;
+    padding: 8px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10%;
+    padding:8px 14px;
+    z-index: 2;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/*formulario*/
+.form-agendamento{
+    position: fixed;
+    top: 120px;
+    right:100px;
+    background-color: var(--primary-color);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.form-agendamento h1{
+    color: var(--white-color);
+    margin: 20px;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+
+
+
+
+
+
 /* butões */
 
-.button-success{
+.button-info{
     font-weight: bold;
     margin: 0 auto;
     border:0px;
     border-radius: 6px;
     padding: 9px 16px;
     color: var(--primary-color);
-    background: var(--success-color);
+    background: var(--info-color);
     cursor: pointer;
     transition: 0.3s;
 }
@@ -69,7 +146,41 @@
 }
 
 .button-danger:hover,
-.button-success:hover{
+.button-info:hover{
     opacity: .9;
     color:var(--white-color);
 }
+
+/*input*/
+.input{
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: start;
+}
+.input label {
+    width: 100%;
+    color: var(--white-color);
+    font-weight: 300;
+}
+
+.input label span {
+    color: var(--error-color);
+}
+
+.input input,
+.input textarea{
+    width: calc(100% - 8px);
+    max-width: 100%;
+    margin: 0;
+    margin-top: 8px;
+    border: 0;
+    border-radius:4px;
+    color: var(--primary-color);
+    padding: 8px;
+    display: block;
+}
+
+
+
