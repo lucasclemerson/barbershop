@@ -1,5 +1,4 @@
 <?php require "configuracoes.php";?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -58,7 +57,7 @@
     </div>
 
     <!-- formulario agendamento -->
-    <form class="form-agendamento" action="agendamento.php" method="POST">
+    <form class="form-agendamento" action="<?=BASE_URL?>post/agendamento.php" method="POST">
         <h1>Agendamento de Horário</h1>
         <div class="input">
             <label for="nome">Nome completo: <span>*</span></label>
@@ -73,18 +72,39 @@
             <input type="text" id="telefone" name="telefone" maxlength="20" placeholder="(084) 00000-0000" required>    
         </div>
         <div class="input">
-            <label for="mensagem">Mensagem: <span>*</span></label>
-            <textarea id="mensagem" name="mensagem" maxlength="100" placeholder="Sua mensagem aqui..." ></textarea> 
+            <label for="data">Agendar para: <span>*</span></label>
+            <input type="datetime-local" id="data" name="data" required/> 
         </div>
         <br>
         <button type="reset" class="button-danger">Limpar</button>  
         <button type="submit" class="button-info">Enviar</button>  
     </form>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="<?=BASE_URL?>js/header.navegation.js"></script>
     <script src="<?=BASE_URL?>js/carousel.js"></script>
+    <?php if (isset($_SESSION["alerta"])){ ?>      
+        <?php if ($_SESSION["alerta"]["erro"]){ ?>
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: "<?php echo $_SESSION["alerta"]["erro"];?>",
+            confirmButtonText: 'OK'
+        })
+    </script>
+            <?php }else{?>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: "<?php echo $_SESSION["alerta"]["success"];?>",
+            confirmButtonText: 'OK'
+        })
+    </script>
+        <?php } ?>
+    <?php 
+        } 
+        session_destroy();
+    ?>
 </body>
 </html>
