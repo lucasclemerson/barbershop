@@ -22,6 +22,10 @@
         public function setEmail($email = ""){
             $this->email = $email;
         }
+        public function setId($id = 0){
+            $this->id = $id;
+        }
+
 
         public function getNome(){
             return $this->nome;          
@@ -32,6 +36,8 @@
         public function getEmail(){
             return $this->email;          
         }
-
+        public function getId(){
+            return $this->id;
+        }
 
     }
