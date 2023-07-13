@@ -11,4 +11,5 @@
     define('DB_USERNAME', $_ENV['DB_USERNAME']);
     define('DB_PASSWORD', $_ENV['DB_PASSWORD']);
     define("BASE_URL", $_ENV['BASE_URL']);
+    define("BASE_ORIGIN", $_ENV['BASE_ORIGIN']);
    
