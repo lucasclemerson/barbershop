@@ -1,5 +1,6 @@
 :root{
     --primary-color: rgb(38, 38, 37);
+    --dark-color: rgb(136, 136, 136);
     --secundary-color: rgb(88, 32, 6);
     --body-color: rgba(255, 255, 255, 0.582);
     --success-color: rgb(59, 212, 59);
@@ -28,6 +29,35 @@ header{
     position: fixed;
     z-index: 10;
 }
+
+/* Scrool bar */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--body-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-color);
+}
+
+.scrollbar-mozilla {
+    scrollbar-color: var(--primary-color) var(--dark-color);
+    scrollbar-width: thin;
+}
+
+.scrollbar-mozilla::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color);
+}
+
+.scrollbar-mozilla::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-color);
+}
+
 
 
 body{
