@@ -57,7 +57,7 @@
     </div>
 
     <!-- formulario agendamento -->
-    <form class="form-agendamento" action="<?=BASE_URL?>post/agendamento.php" method="POST">
+    <form id="agendamento" class="form-agendamento" action="<?=BASE_URL?>post/agendamento.php" method="POST">
         <h1>Agendamento de Horário</h1>
         <div class="input">
             <label for="nome">Nome completo: <span>*</span></label>
@@ -73,7 +73,7 @@
         </div>
         <div class="input">
             <label for="data">Agendar para: <span>*</span></label>
-            <input type="datetime-local" id="data" name="data" required/> 
+            <input min="<?=date('Y-m-d\TH:i')?>" value="<?=date('Y-m-d\TH:i')?>" type="datetime-local" id="data" name="data" required/> 
         </div>
         <br>
         <button type="reset" class="button-danger">Limpar</button>  
