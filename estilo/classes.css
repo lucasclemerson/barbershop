@@ -4,10 +4,17 @@
     color: var(--body-color);
     margin: 0 auto;
     display: inline-block;
-    margin: 10px 20px;
     text-align: start;
     position: absolute;
     left: 50px;
+    top:10px;
+    margin: auto 0px;
+    vertical-align: middle;
+}
+
+.logomarca a{
+    margin: auto 0;
+    padding: 0;
 }
 
 .navegacao{
@@ -45,10 +52,6 @@
 
 
 /*carousel*/
-.carousel {
-    width: 100%;
-    margin: auto;
-}
 
 .carousel-container {
     width: 100%;
@@ -56,6 +59,7 @@
 }
 
 .carousel {
+    width: 100%;
     width: auto;
     display: inline-flex;
     width: fit-content;
@@ -72,22 +76,6 @@
     z-index: -1;
 }
   
-.carousel-prev,
-.carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--body-color);
-    background-color: var(--primary-color);
-    font-size: 24px;
-    padding: 8px;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 10%;
-    padding:8px 14px;
-    z-index: 2;
-}
-
 .carousel-prev {
     left: 10px;
 }
@@ -98,13 +86,16 @@
 
 /*formulario*/
 .form-agendamento{
+    z-index: 999;
     position: fixed;
     top: 120px;
     right:100px;
     background-color: var(--primary-color);
     padding: 20px 40px;
     border-radius: 10px;
+    transition: all 1.5s ease;
 }
+
 
 .form-agendamento h1{
     color: var(--white-color);
@@ -114,9 +105,197 @@
 }
 
 
+.button-carousel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--body-color);
+    background-color: var(--black-color);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    padding:2px 6px;
+    z-index: 2;
+    border: none;
+    opacity: .6;
+}
+
+.button-carousel{
+    opacity: 1;
+}
+
+
+.lg{
+    font-size: 2.2em;
+    margin: auto;
+    padding: 0;
+}
+
+.fixed{
+    transform: translateY(0);
+    position: fixed;
+}
+.absolute{
+    position: absolute;
+    transform: translateY(100px);
+}
+
+
+/*sobrenos*/
+.sobrenos{
+    position: relative;
+    height: 100vh;
+    width: 100%; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("http://192.168.0.6:8000/barbershop/uploads/imagens/carousel-img3.jpg");
+}
+
+.caixa-esquerda{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% - 80px);
+    background-color: var(--black-transparent-color);
+    opacity: 1;
+    height: 100vh;
+    color: var(--white-color);
+    padding: 0px 40px;
+}
+.caixa-esquerda h1{
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+    margin: 40px auto;
+    background-color: var(--error-color);
+    width: fit-content;
+}
+
+.caixa-esquerda p{
+    margin-bottom: 20px;
+}
+
+/*contato*/
+
+.contato {
+    position: relative;
+    height: 100vh;
+    width: 100%; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("http://192.168.0.6:8000/barbershop/uploads/imagens/carousel-img4.jpg");
+}
+
+.caixa-direita{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(50% - 80px);
+    background-color: var(--black-transparent-color);
+    opacity: 1;
+    height: 100vh;
+    color: var(--white-color);
+    padding: 0px 40px;
+}
+
+.caixa-direita h1{
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+    margin: 40px auto;
+    background-color: var(--info-color);
+    width: fit-content;
+}
+
+
+.caixa-direita form{
+    width: 80%;
+    margin: auto;
+}
 
 
 
+/* footer */
+.logo{
+    text-align: start;
+    width: 90%;
+    margin: auto;
+}
+
+.container-opcoes{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    padding: 20px 0px;
+    align-items: start;
+    align-content: start;
+    justify-content: space-evenly;
+    vertical-align: top;
+}
+
+.acesso{
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.acesso h2{
+    vertical-align: top;
+    font-size: 1.4em;
+    color: var(--white-color);
+    margin: 10px 0px;
+}
+
+.acesso ul{
+    vertical-align: start;
+    list-style: none;
+}
+
+.acesso:last-child > h2{
+    text-align: center;
+}
+
+.acesso:last-child > ul{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.acesso:last-child > ul > li {
+    display: inline-block;
+    width: auto;
+}
+
+
+.acesso ul li a{
+    display: block;
+    text-decoration: none;
+    color: var(--body-color);
+    margin-bottom: 4px;
+}
+
+.acesso ul li a:hover{
+    color: var(--white-color);
+}
+
+
+.copyright{
+    padding: 30px 0px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.politicas{
+    width:90%;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+.politicas a{
+    margin: 0px 20px;
+}
 
 
 /* butões */
@@ -171,7 +350,7 @@
 
 .input input,
 .input textarea{
-    width: calc(100% - 8px);
+    width: calc(100% - 16px);
     max-width: 100%;
     margin: 0;
     margin-top: 8px;

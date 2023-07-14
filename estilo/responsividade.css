@@ -4,27 +4,62 @@
     }
 }
 
+@media screen and (max-width:1024px){
+    .caixa-esquerda,
+    .caixa-direita{
+        width: calc(100% - 80px);
+    }
+}
+
 @media screen and (max-width:800px){
+    .container-opcoes{
+        display: block;
+    }
+    .acesso,
+    .logo{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .form-agendamento{
+        right: 20px;
+        left: 20px;
+        top: 150px;
+        position: absolute;
+    }
+    
     .logomarca{
         display: block;
+        top:0px;
     }
     #button-hamburger{
         display:block;
         margin-right: 20px;   
     }
-    .navegacao{
-        display:none;
-    }
+    
     .opcoes{
         display: block;
     }
     .opcoes li{
         margin: 10px 0px;
     }
-    .opcoes li:nth-last-child(-n+3) {
+    
+    
+    .navegacao,
+    .opcoes li:nth-last-child(-n+4) {
         display: none;
     }
     header{
         text-align: end;
+    }
+}
+
+
+
+@media screen and (max-width:400px){
+    #carousel button{
+        display: none;
+    }
+    .caixa-direita form{
+        width: 100%;
     }
 }

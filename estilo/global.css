@@ -1,5 +1,5 @@
 :root{
-    --primary-color: rgb(38, 38, 37);
+    --primary-color: #1E1E1E;
     --dark-color: rgb(136, 136, 136);
     --secundary-color: rgb(88, 32, 6);
     --body-color: rgba(255, 255, 255, 0.582);
@@ -7,6 +7,8 @@
     --error-color: rgb(212, 59, 59);
     --info-color: rgb(99, 165, 240);
     --white-color: rgb(255, 255, 255);
+    --black-color: rgb(0, 0, 0);
+    --black-transparent-color: rgba(0, 0, 0, 0.671);
 }
 
 
@@ -27,7 +29,7 @@ header{
     align-items: center;
     background-color: var(--primary-color);
     position: fixed;
-    z-index: 10;
+    z-index: 9999;
 }
 
 /* Scrool bar */
@@ -69,9 +71,21 @@ body{
 
 #carousel{
     width: 100%;
-    margin:auto;
+    margin:0px auto;
 }
 
+
 #button-hamburger{
+    color: var(--white-color);
     display: none;
+    cursor: pointer;
+}
+
+
+#footer{
+    width: 100%;
+    margin: auto;
+    padding: 40px 0px 0px 0px;
+    background-color: var(--primary-color);
+    vertical-align: top;
 }
