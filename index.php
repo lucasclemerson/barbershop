@@ -14,6 +14,8 @@
    
     <!-- icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!-- style do sistema -->
     <link href="<?=BASE_URL?>estilo/global.css" rel="stylesheet" type="text/css">
@@ -45,23 +47,6 @@
             </ul>
         </nav>
     </header>
-    <!-- carousel -->
-    <div id="carousel">
-        <button class="button-carousel carousel-prev" onclick="previousSlide()">
-            <i class="bi lg bi-arrow-left-short"></i>
-        </button>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="slide"><img src="<?=BASE_URL?>uploads/imagens/carousel-img1.jpg" alt="Imagem 1"></div>
-                <div class="slide"><img src="<?=BASE_URL?>uploads/imagens/carousel-img2.jpg" alt="Imagem 2"></div>
-                <div class="slide"><img src="<?=BASE_URL?>uploads/imagens/carousel-img3.jpg" alt="Imagem 3"></div>
-                <div class="slide"><img src="<?=BASE_URL?>uploads/imagens/carousel-img4.jpg" alt="Imagem 4"></div>
-            </div>
-        </div>
-        <button class="button-carousel carousel-next" onclick="nextSlide()">
-            <i class="bi lg bi-arrow-right-short"></i>
-        </button>
-    </div>
 
     <!-- formulario agendamento -->
     <form id="agendamento" class="form-agendamento fixed" action="<?=BASE_URL?>post/agendamento.php" method="POST">
@@ -87,6 +72,7 @@
         <button type="submit" class="button-info">Enviar</button>  
     </form>
 
+    <!-- sobre nos -->
     <div class="sobrenos" id="sobrenos">
         <div class="caixa-esquerda">
             <h1>SOBRE NÓS</h1>
@@ -97,6 +83,53 @@
         </div>
     </div>
 
+    <!-- ambiente -->
+    <div id="carousel" class="carousel">
+        <h1 class="title">Veja de perto nosso ambiente!</h1> 
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider-single">
+                    <img class="slider-single-image" src="<?=BASE_URL?>uploads/imagens/carousel/imagem-1.jpeg" alt="---" />
+                    <h1 class="slider-single-title">A arte do estilo masculino: uma experiência única na nossa barbearia.
+                        <span class="slider-single-likes">
+                            <i class="fa fa-heart"></i>
+                            <?=rand(100, 300);?>
+                        </span>
+                    </h1>
+                </div>  <div class="slider-single">
+                <img class="slider-single-image" src="<?=BASE_URL?>uploads/imagens/carousel/imagem-2.jpg" alt="---" />
+                    <h1 class="slider-single-title">Aqui, cada corte é uma obra-prima!
+                        <span class="slider-single-likes">
+                            <i class="fa fa-heart"></i>
+                            <?=rand(100, 300);?>
+                        </span>
+                    </h1>
+                </div>
+
+                <div class="slider-single">
+                    <img class="slider-single-image" src="<?=BASE_URL?>uploads/imagens/carousel/imagem-3.jpg" alt="---" />
+                    <h1 class="slider-single-title">Um espaço para relaxar, se cuidar e sair com estilo.
+                        <span class="slider-single-likes">
+                            <i class="fa fa-heart"></i>
+                            <?=rand(100, 300);?>
+                        </span>
+                    </h1>
+                </div>  
+                
+                <div class="slider-single">
+                    <img class="slider-single-image" src="<?=BASE_URL?>uploads/imagens/carousel/imagem-4.jpg" alt="1" />
+                    <h1 class="slider-single-title">Cortes precisos, barbas bem cuidadas e muito mais. Aqui é o seu lugar.
+                        <span class="slider-single-likes">
+                            <i class="fa fa-heart"></i>
+                            <?=rand(100, 300);?>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- contato-->
     <div id="contato" class="contato">
         <div class="caixa-direita">
             <h1>ENTRE EM CONTATO</h1>
@@ -124,9 +157,8 @@
         </div>
     </div>
 
-
     <!-- footer -->
-    <footer id="footer">
+    <footer id="footer" class="footer">
         <div class="logo">
             <img width="auto" height="80" src="<?=BASE_URL?>uploads/imagens/logo.png">
         </div>
@@ -178,6 +210,11 @@
             <a class="ancor" href="#">Política de Privacidade</a>
             <a class="ancor" href="#">Termos de uso</a>
         </div>
+    
+        <button id="topo" class="button-danger fixed" onclick="rolarAteOTopo()">
+            Subir Página
+            <i class="bi bi-arrow-up-circle"></i>
+        </button> 
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>

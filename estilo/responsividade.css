@@ -9,9 +9,30 @@
     .caixa-direita{
         width: calc(100% - 80px);
     }
+
+    .form-agendamento{
+        top: 0;
+        position: static !important;
+        border-radius: 0px;
+        margin: auto;
+    }
+
+    .sobrenos{
+        top: 0px;
+        position: normal !important;
+        margin-bottom: 0px;
+    }
+
+    .slider-container .slider-content .slider-single .slider-single-image {
+        height:auto;
+    }
 }
 
 @media screen and (max-width:800px){
+    .slider-container .slider-content{
+        width: 80%;
+    }
+
     .container-opcoes{
         display: block;
     }
@@ -20,13 +41,7 @@
         text-align: center;
         margin-bottom: 30px;
     }
-    .form-agendamento{
-        right: 20px;
-        left: 20px;
-        top: 150px;
-        position: absolute;
-    }
-    
+
     .logomarca{
         display: block;
         top:0px;
@@ -50,6 +65,10 @@
     }
     header{
         text-align: end;
+    }
+
+    .slider-container .slider-content .slider-single .slider-single-image {
+        width: 125%;
     }
 }
 
