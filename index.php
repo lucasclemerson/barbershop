@@ -24,7 +24,7 @@
 </head> 
 <body id="inicio">
     <!-- header-->
-    <header>
+    <header class="destaque">
         <div class="logomarca">
             <a href="<?=BASE_URL?>">
                 <img height="80" width="auto" src="<?=BASE_URL?>uploads/imagens/logo.png"> 
@@ -39,7 +39,7 @@
                 <li><a href="#sobrenos" class="ancor">Sobre Nós</a></li>
                 <li><a href="#sobrenos" class="ancor"></a></li>
                 <li><a href="#contato" class="ancor">Contato</a></li>
-                <li><button class="button-danger">Agendar agora!</button></li>
+                <li><a href="#agendamento" class="ancor button-yellow">AGENDAMENTO</a></li>
                 <li class="separador">|</li>
                 <li><a target="_blank" href="#" class="ancor"><img height="40" src="https://img.icons8.com/?size=512&id=13912&format=png"></a></li>
                 <li><a target="_blank" href="#" class="ancor"><img height="40" src="https://img.icons8.com/?size=512&id=32323&format=png"></a></li>
@@ -48,38 +48,56 @@
         </nav>
     </header>
 
-    <!-- formulario agendamento -->
-    <form id="agendamento" class="form-agendamento fixed" action="<?=BASE_URL?>post/agendamento.php" method="POST">
-        <h1>Agendamento de Horário</h1>
-        <div class="input">
-            <label for="nome">Nome completo: <span>*</span></label>
-            <input type="text" id="nome" name="nome" maxlength="50" placeholder="Seu nome completo" required>    
+    <main class="main" id="main">
+        <div class="novidades">
+            <h1>Receba agora mesmo tudo o que há de novo aqui!</h1>
+            <p>Novidades, promoções, etc.
+            <form action="<?=BASE_URL?>post/novidades.php" method="POST">
+                <div class="input-flex">
+                    <input type="email" name="email" placeholder="Digite seu melhor e-mail" required>
+                    <button class="button-yellow" type="submit">Confirmar</button>
+                </div>
+            </form>
         </div>
-        <div class="input">
-            <label for="email">E-mail: <span>*</span></label>
-            <input type="email" id="email" name="email" maxlength="50" placeholder="exemplo@gmail.com" required>    
+        <div class="celular">
+
         </div>
-        <div class="input">
-            <label for="telefone">Telefone: <span>*</span></label>
-            <input type="text" id="telefone" name="telefone" maxlength="20" placeholder="(084) 00000-0000" required>    
-        </div>
-        <div class="input">
-            <label for="data">Agendar para: <span>*</span></label>
-            <input min="<?=date('Y-m-d\TH:i')?>" value="<?=date('Y-m-d\TH:i')?>" type="datetime-local" id="data" name="data" required/> 
-        </div>
-        <br>
-        <button type="reset" class="button-danger">Limpar</button>  
-        <button type="submit" class="button-info">Enviar</button>  
-    </form>
+    </main>
 
     <!-- sobre nos -->
-    <div class="sobrenos" id="sobrenos">
-        <div class="caixa-esquerda">
-            <h1>SOBRE NÓS</h1>
-            <p>Bem-vindo à Barbershop, o destino definitivo para os homens modernos que buscam um corte de cabelo e barba impecáveis. Nossa barbearia é o lugar onde a tradição se encontra com a moda, proporcionando a você uma experiência única de cuidado masculino.</p>
-            <p>Além de cortes de cabelo e barba, oferecemos uma variedade de serviços para atender às suas necessidades de cuidados pessoais. Desde um relaxante tratamento facial até uma massagem revigorante, estamos prontos para ajudá-lo a se sentir revigorado e renovado.</p>
-            <p>Venha nos visitar na Barbershop e descubra uma experiência de cuidado masculino incomparável. Nossa equipe está ansiosa para recebê-lo e proporcionar um serviço excepcional, criando uma relação de confiança que o fará voltar sempre. Agende seu horário hoje mesmo e descubra o poder de um bom corte de cabelo e barba na construção de sua confiança e estilo. Na Barbershop, nós cuidamos de você.</p>
-            <button type="button" class="button-danger">QUERO FAZER PARTE!</button>
+    <div class="container">
+        <!-- formulario agendamento -->
+        <form id="agendamento" class="form-agendamento absolute" action="<?=BASE_URL?>post/agendamento.php" method="POST">
+            <h1>Agendamento de Horário</h1>
+            <div class="input">
+                <label for="nome">Nome completo: <span>*</span></label>
+                <input type="text" id="nome" name="nome" maxlength="50" placeholder="Seu nome completo" required>    
+            </div>
+            <div class="input">
+                <label for="email">E-mail: <span>*</span></label>
+                <input type="email" id="email" name="email" maxlength="50" placeholder="exemplo@gmail.com" required>    
+            </div>
+            <div class="input">
+                <label for="telefone">Telefone: <span>*</span></label>
+                <input type="text" id="telefone" name="telefone" maxlength="20" placeholder="(084) 00000-0000" required>    
+            </div>
+            <div class="input">
+                <label for="data">Agendar para: <span>*</span></label>
+                <input min="<?=date('Y-m-d\TH:i')?>" value="<?=date('Y-m-d\TH:i')?>" type="datetime-local" id="data" name="data" required/> 
+            </div>
+            <br>
+            <button type="reset" class="button-danger">Limpar</button>  
+            <button type="submit" class="button-yellow">Enviar</button>  
+        </form>
+
+        <div class="sobrenos" id="sobrenos">
+            <div class="caixa-esquerda">
+                <h1>SOBRE NÓS</h1>
+                <p>Bem-vindo à Barbershop, o destino definitivo para os homens modernos que buscam um corte de cabelo e barba impecáveis. Nossa barbearia é o lugar onde a tradição se encontra com a moda, proporcionando a você uma experiência única de cuidado masculino.</p>
+                <p>Além de cortes de cabelo e barba, oferecemos uma variedade de serviços para atender às suas necessidades de cuidados pessoais. Desde um relaxante tratamento facial até uma massagem revigorante, estamos prontos para ajudá-lo a se sentir revigorado e renovado.</p>
+                <p>Venha nos visitar na Barbershop e descubra uma experiência de cuidado masculino incomparável. Nossa equipe está ansiosa para recebê-lo e proporcionar um serviço excepcional, criando uma relação de confiança que o fará voltar sempre. Agende seu horário hoje mesmo e descubra o poder de um bom corte de cabelo e barba na construção de sua confiança e estilo. Na Barbershop, nós cuidamos de você.</p>
+                <button type="button" class="button-yellow">QUERO FAZER PARTE!</button>
+            </div>
         </div>
     </div>
 
@@ -132,7 +150,7 @@
     <!-- contato-->
     <div id="contato" class="contato">
         <div class="caixa-direita">
-            <h1>ENTRE EM CONTATO</h1>
+            <h1>CONTATE-NOS</h1>
             <form action="<?=BASE_URL?>post/contato.php" method="POST">
                 <div class="input">
                     <label for="nome">Nome completo: <span>*</span></label>
@@ -152,7 +170,7 @@
                 </div>
                 <br>
                 <button type="reset" class="button-danger">Limpar</button>  
-                <button type="submit" class="button-info">Enviar</button>  
+                <button type="submit" class="button-yellow">Enviar</button>  
             </form>
         </div>
     </div>
@@ -211,7 +229,7 @@
             <a class="ancor" href="#">Termos de uso</a>
         </div>
     
-        <button id="topo" class="button-danger fixed" onclick="rolarAteOTopo()">
+        <button id="topo" class="button-yellow fixed" onclick="rolarAteOTopo()">
             Subir Página
             <i class="bi bi-arrow-up-circle"></i>
         </button> 
