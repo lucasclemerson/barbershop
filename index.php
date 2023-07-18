@@ -37,7 +37,6 @@
                 <li><a href="#profissionais" class="ancor">Profissionais</a></li>
                 <li><a href="#ondeestamos" class="ancor">Onde estamos?</a></li>
                 <li><a href="#sobrenos" class="ancor">Sobre Nós</a></li>
-                <li><a href="#sobrenos" class="ancor"></a></li>
                 <li><a href="#contato" class="ancor">Contato</a></li>
                 <li><a href="#agendamento" class="ancor button-yellow">AGENDAMENTO</a></li>
                 <li class="separador">|</li>
