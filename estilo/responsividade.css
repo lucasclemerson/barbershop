@@ -5,6 +5,22 @@
 }
 
 @media screen and (max-width:1024px){
+    .main,
+    .celular,
+    .novidades{
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .novidades{
+        width: calc(100% - 60px);
+    }
+    .novidades h1,
+    .input-flex{
+        width: 100%;
+    }
+
     .caixa-esquerda,
     .caixa-direita{
         width: calc(100% - 80px);
@@ -15,6 +31,7 @@
         position: static !important;
         border-radius: 0px;
         margin: auto;
+        height: 100vh;
     }
 
     .sobrenos{
@@ -67,6 +84,8 @@
         text-align: end;
     }
 
+
+    .slider-container .slider-content .slider-single .slider-single-title, 
     .slider-container .slider-content .slider-single .slider-single-image {
         width: 125%;
     }

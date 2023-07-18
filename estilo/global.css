@@ -5,10 +5,11 @@
     --body-color: rgba(255, 255, 255, 0.582);
     --success-color: rgb(59, 212, 59);
     --error-color: rgb(212, 59, 59);
+    --yellow-color: #d49e3b;
     --info-color: rgb(99, 165, 240);
     --white-color: rgb(255, 255, 255);
     --black-color: rgb(0, 0, 0);
-    --black-transparent-color: rgba(0, 0, 0, 0.671);
+    --black-transparent-color: #000000ab;
 }
 
 
@@ -17,18 +18,19 @@
     font-family: 'Barlow Semi Condensed', sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 17px;
+    list-style: none;
 }
 
 
 header{
-    padding: 20px 0px;
+    padding: 22px 0px;
     text-align: center;
     margin: auto;
     width: 100%;
     align-items: center;
     background-color: var(--primary-color);
-    /*position: fixed;*/
+    position: fixed;
     z-index: 9999;
 }
 
@@ -44,7 +46,7 @@ header{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--primary-color);
+    background-color: var(--yellow-color);
 }
 
 .scrollbar-mozilla {
@@ -80,4 +82,9 @@ body{
     bottom: 20px;
     right: 20px;
     z-index: 9;
+}
+
+input:focus{ 
+    box-shadow: 0px 4px 0 0 var(--white-color);
+    outline: 0;
 }
