@@ -148,6 +148,28 @@
   
     <!-- contato-->
     <div id="contato" class="contato">
+        <div class="caixa-esquerda">
+            <h1 class="title bg-transparent">Perguntas frequentes</h1>
+
+            <div class="perguntas">
+                <ul class="pergunta">
+                    <li>
+                        <h2 onClick="mostrarResposta(1);">Quais são os serviços oferecidos pela barbearia?</h2>
+                        <p style="display:none;" class="resposta">Oferecemos diversos serviços, incluindo cortes de cabelo modernos, barba bem-feita, design de sobrancelhas, tratamentos capilares, e muito mais.</p>
+                    </li>
+                    <li>
+                        <h2 onClick="mostrarResposta(2);">Quais produtos vocês utilizam nos serviços de barbearia?</h2>
+                        <p style="display:none;" class="resposta">Utilizamos produtos de alta qualidade, incluindo shampoos, condicionadores, óleos para barba e cera de modelagem, de marcas reconhecidas no mercado de cuidados pessoais masculinos.</p>
+                    </li>
+                    <li>
+                        <h2 onClick="mostrarResposta(3);">Qual o horário de funcionamento?</h2>
+                        <p style="display:none;" class="resposta">Estamos abertos de segunda a sábado, das 9h às 19h. Fechamos aos domingos.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
         <div class="caixa-direita">
             <h1>CONTATE-NOS</h1>
             <form action="<?=BASE_URL?>post/contato.php" method="POST">
@@ -239,6 +261,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="<?=BASE_URL?>js/header.navegation.js"></script>
     <script src="<?=BASE_URL?>js/carousel.js"></script>
+    <script src="<?=BASE_URL?>js/perguntas.js"></script>
     <script src="<?=BASE_URL?>js/loader.scrool.js"></script>
     <?php if (isset($_SESSION["alerta"])){ ?>      
         <?php if ($_SESSION["alerta"]["erro"]){ ?>

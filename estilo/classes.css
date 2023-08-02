@@ -671,6 +671,37 @@
     display: block;
 }
 
+/*perguntas frequentes*/
+.perguntas{
+    color: var(--black-color);
+    text-align: justify;
+}
+
+.pergunta li{
+    width: calc(100% - 16px);
+    margin: 20px 0px;
+    background-color: var(--white-color);
+    padding: 20px 8px;
+    border-radius: 10px;
+}
+
+.pergunta li h2{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.resposta{
+    transition: opacity 2s ease-in-out;
+}
+
+/*background-color*/
+.bg-transparent{
+    background: #FFFFFF00 !important;
+}
+
+
 
 /*keyframes*/
 @keyframes heartbeat {
